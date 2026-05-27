@@ -75,8 +75,7 @@
                     <a href="#features" class="text-gray-700 hover:text-primary font-medium transition">Ưu điểm</a>
                 </div>
                 <div class="hidden md:flex items-center space-x-4">
-                    <a href="#" class="text-gray-700 hover:text-primary font-medium transition">Đăng nhập</a>
-                    <a href="#" class="bg-primary hover:bg-blue-600 text-white px-5 py-2.5 rounded-full font-medium transition shadow-lg shadow-blue-500/30">Đăng ký ngay</a>
+                    <button onclick="openZaloModal()" class="bg-primary hover:bg-blue-600 text-white px-5 py-2.5 rounded-full font-medium transition shadow-lg shadow-blue-500/30">Liên hệ Zalo</button>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
@@ -93,8 +92,7 @@
             <a href="#pricing" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-primary font-medium">Bảng giá chi tiết</a>
             <a href="#features" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-primary font-medium">Ưu điểm</a>
             <div class="pt-2 border-t border-gray-100 flex flex-col gap-2">
-                <a href="#" class="text-center text-gray-700 hover:text-primary font-medium py-2">Đăng nhập</a>
-                <a href="#" class="text-center bg-primary text-white py-2.5 rounded-full font-medium shadow">Đăng ký ngay</a>
+                <button onclick="openZaloModal(); toggleMobileMenu()" class="text-center bg-primary text-white py-2.5 rounded-full font-medium shadow">Liên hệ Zalo</button>
             </div>
         </div>
     </nav>
@@ -182,7 +180,7 @@
             <div id="content-facebook" class="tab-content active">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Service Card -->
-                    <div onclick="openOrderModal('Facebook - Like Bài Viết', 10)" class="cursor-pointer bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition duration-300 group">
+                    <div onclick="openZaloModal()" class="cursor-pointer bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition duration-300 group">
                         <div class="w-14 h-14 bg-blue-50 text-fb rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-fb group-hover:text-white transition">
                             <i class="fa-solid fa-thumbs-up"></i>
                         </div>
@@ -240,8 +238,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Service Card -->
                     <div onclick="openZaloModal()" class="cursor-pointer bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition duration-300 group">
-                        <div class="w-14 h-14 bg-gray-100 text-tiktok rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-tiktok group-hover:text-white transition">
-                            <i class="fa-solid fa-heart"></i>
+                        <div class="w-14 h-14 bg-blue-50 text-fb rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-fb group-hover:text-white transition">
+                            <i class="fa-solid fa-user-plus"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Tăng Tim (Heart)</h3>
                         <p class="text-gray-500 mb-4 text-sm">Tăng lượng thả tim cho video TikTok nhanh chóng, giúp dễ dàng ăn đề xuất lên xu hướng.</p>
@@ -253,8 +251,8 @@
 
                     <!-- Service Card -->
                     <div onclick="openZaloModal()" class="cursor-pointer bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition duration-300 group">
-                        <div class="w-14 h-14 bg-gray-100 text-tiktok rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-tiktok group-hover:text-white transition">
-                            <i class="fa-solid fa-user-check"></i>
+                        <div class="w-14 h-14 bg-blue-50 text-fb rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-fb group-hover:text-white transition">
+                            <i class="fa-solid fa-comments"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Tăng Follower</h3>
                         <p class="text-gray-500 mb-4 text-sm">Tăng người theo dõi kênh TikTok để đủ điều kiện bật giỏ hàng, Live stream, Affiliate.</p>
@@ -266,8 +264,8 @@
 
                     <!-- Service Card -->
                     <div onclick="openZaloModal()" class="cursor-pointer bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition duration-300 group">
-                        <div class="w-14 h-14 bg-gray-100 text-tiktok rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-tiktok group-hover:text-white transition">
-                            <i class="fa-solid fa-play"></i>
+                        <div class="w-14 h-14 bg-blue-50 text-fb rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-fb group-hover:text-white transition">
+                            <i class="fa-solid fa-eye"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Tăng Lượt Xem</h3>
                         <p class="text-gray-500 mb-4 text-sm">Kéo hàng triệu lượt xem cho video TikTok siêu tốc, tăng độ uy tín cực khủng cho kênh.</p>
@@ -345,7 +343,7 @@
                                 <td class="py-4 px-6 text-right font-bold text-blue-600">10 đ</td>
                                 <td class="py-4 px-6 text-gray-600"><i class="fa-solid fa-bolt text-yellow-500 mr-1"></i> 5k - 10k / Ngày</td>
                                 <td class="py-4 px-6 text-center"><span class="bg-emerald-50 text-emerald-600 px-2.5 py-1 rounded-full text-xs font-bold"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Hoạt động</span></td>
-                                <td class="py-4 px-6 text-center"><button onclick="openOrderModal('Facebook - Like Bài Viết (Server Giá Rẻ)', 10)" class="bg-primary hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-xl text-xs transition shadow-sm">Tạo đơn</button></td>
+                                <td class="py-4 px-6 text-center"><button onclick="openZaloModal()" class="bg-primary hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-xl text-xs transition shadow-sm">Tạo đơn</button></td>
                             </tr>
                             <!-- FB SV2 -->
                             <tr class="hover:bg-gray-50/80 transition" data-platform="facebook">
@@ -358,7 +356,7 @@
                                 <td class="py-4 px-6 text-right font-bold text-blue-600">18 đ</td>
                                 <td class="py-4 px-6 text-gray-600"><i class="fa-solid fa-bolt text-yellow-500 mr-1"></i> Siêu tốc (1-5 phút)</td>
                                 <td class="py-4 px-6 text-center"><span class="bg-emerald-50 text-emerald-600 px-2.5 py-1 rounded-full text-xs font-bold"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Hoạt động</span></td>
-                                <td class="py-4 px-6 text-center"><button onclick="openOrderModal('Facebook - Like Bài Viết VIP (Nick Cổ Hoạt Động)', 18)" class="bg-primary hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-xl text-xs transition shadow-sm">Tạo đơn</button></td>
+                                <td class="py-4 px-6 text-center"><button onclick="openZaloModal()" class="bg-primary hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-xl text-xs transition shadow-sm">Tạo đơn</button></td>
                             </tr>
                             <!-- FB SV3 -->
                             <tr class="hover:bg-gray-50/80 transition" data-platform="facebook">
@@ -371,7 +369,7 @@
                                 <td class="py-4 px-6 text-right font-bold text-blue-600">25 đ</td>
                                 <td class="py-4 px-6 text-gray-600"><i class="fa-solid fa-bolt text-yellow-500 mr-1"></i> 2k - 5k / Ngày</td>
                                 <td class="py-4 px-6 text-center"><span class="bg-emerald-50 text-emerald-600 px-2.5 py-1 rounded-full text-xs font-bold"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Hoạt động</span></td>
-                                <td class="py-4 px-6 text-center"><button onclick="openOrderModal('Facebook - Sub/Follow Trang Cá Nhân (Speed)', 25)" class="bg-primary hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-xl text-xs transition shadow-sm">Tạo đơn</button></td>
+                                <td class="py-4 px-6 text-center"><button onclick="openZaloModal()" class="bg-primary hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-xl text-xs transition shadow-sm">Tạo đơn</button></td>
                             </tr>
                             <!-- FB SV4 -->
                             <tr class="hover:bg-gray-50/80 transition" data-platform="facebook">
@@ -384,7 +382,7 @@
                                 <td class="py-4 px-6 text-right font-bold text-blue-600">38 đ</td>
                                 <td class="py-4 px-6 text-gray-600"><i class="fa-solid fa-bolt text-yellow-500 mr-1"></i> 1k - 3k / Ngày</td>
                                 <td class="py-4 px-6 text-center"><span class="bg-emerald-50 text-emerald-600 px-2.5 py-1 rounded-full text-xs font-bold"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Hoạt động</span></td>
-                                <td class="py-4 px-6 text-center"><button onclick="openOrderModal('Facebook - Sub/Follow Fanpage (Bảo Hành 30 Ngày)', 38)" class="bg-primary hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-xl text-xs transition shadow-sm">Tạo đơn</button></td>
+                                <td class="py-4 px-6 text-center"><button onclick="openZaloModal()" class="bg-primary hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-xl text-xs transition shadow-sm">Tạo đơn</button></td>
                             </tr>
                             <!-- FB SV5 -->
                             <tr class="hover:bg-gray-50/80 transition" data-platform="facebook">
@@ -397,7 +395,7 @@
                                 <td class="py-4 px-6 text-right font-bold text-blue-600">150 đ</td>
                                 <td class="py-4 px-6 text-gray-600"><i class="fa-solid fa-bolt text-yellow-500 mr-1"></i> Đều đặn tự nhiên</td>
                                 <td class="py-4 px-6 text-center"><span class="bg-emerald-50 text-emerald-600 px-2.5 py-1 rounded-full text-xs font-bold"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Hoạt động</span></td>
-                                <td class="py-4 px-6 text-center"><button onclick="openOrderModal('Facebook - Seeding Comment (Nội Dung Tùy Chọn)', 150)" class="bg-primary hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-xl text-xs transition shadow-sm">Tạo đơn</button></td>
+                                <td class="py-4 px-6 text-center"><button onclick="openZaloModal()" class="bg-primary hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-xl text-xs transition shadow-sm">Tạo đơn</button></td>
                             </tr>
                             <!-- FB SV6 -->
                             <tr class="hover:bg-gray-50/80 transition" data-platform="facebook">
@@ -410,7 +408,7 @@
                                 <td class="py-4 px-6 text-right font-bold text-blue-600">5 đ</td>
                                 <td class="py-4 px-6 text-gray-600"><i class="fa-solid fa-bolt text-yellow-500 mr-1"></i> Tức thì (1-2 phút)</td>
                                 <td class="py-4 px-6 text-center"><span class="bg-emerald-50 text-emerald-600 px-2.5 py-1 rounded-full text-xs font-bold"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Hoạt động</span></td>
-                                <td class="py-4 px-6 text-center"><button onclick="openOrderModal('Facebook - Tăng Mắt Live Stream (Duy Trì 30 Phút)', 5)" class="bg-primary hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-xl text-xs transition shadow-sm">Tạo đơn</button></td>
+                                <td class="py-4 px-6 text-center"><button onclick="openZaloModal()" class="bg-primary hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-xl text-xs transition shadow-sm">Tạo đơn</button></td>
                             </tr>
                             <!-- TT SV1 -->
                             <tr class="hover:bg-gray-50/80 transition" data-platform="tiktok">
@@ -587,61 +585,6 @@
         </div>
     </footer>
 
-    <!-- Interactive Order / Pricing Calculator Modal -->
-    <div id="order-modal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center hidden p-4">
-        <div class="bg-white rounded-2xl w-full max-w-lg shadow-2xl border border-gray-100 overflow-hidden transform scale-95 transition-transform duration-300">
-            <!-- Modal Header -->
-            <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 flex justify-between items-center">
-                <div>
-                    <h3 class="text-xl font-bold">Thử Tính Giá Đơn Hàng</h3>
-                    <p class="text-blue-100 text-xs mt-1">Hệ thống ước tính chi phí thực tế cực nhanh</p>
-                </div>
-                <button onclick="closeOrderModal()" class="text-white/80 hover:text-white focus:outline-none bg-black/10 hover:bg-black/20 w-8 h-8 rounded-full flex items-center justify-center">
-                    <i class="fa-solid fa-xmark text-lg"></i>
-                </button>
-            </div>
-            <!-- Modal Body -->
-            <div class="p-6 space-y-4">
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-1.5">Gói dịch vụ đã chọn</label>
-                    <input type="text" id="modal-service-name" readonly class="w-full px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-50 font-semibold text-gray-800 text-sm focus:outline-none">
-                </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-1.5">Đơn giá</label>
-                        <div class="relative">
-                            <input type="text" id="modal-service-price" readonly class="w-full pl-4 pr-10 py-2.5 rounded-xl border border-gray-200 bg-gray-50 font-bold text-blue-600 text-sm focus:outline-none">
-                            <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-xs text-gray-400 font-bold">đ / 1</span>
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-1.5">Số lượng tương tác</label>
-                        <input type="number" id="modal-quantity" value="1000" min="10" oninput="calculateTotal()" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm font-bold">
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-1.5">Liên kết tài khoản / Video</label>
-                    <input type="url" id="modal-link" placeholder="Nhập link bài viết, fanpage hoặc kênh cá nhân..." class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm">
-                </div>
-                <!-- Real-time Price Box -->
-                <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 flex justify-between items-center">
-                    <div>
-                        <span class="text-xs text-blue-500 font-bold uppercase tracking-wider block">Ước Tính Tổng Tiền</span>
-                        <span class="text-2xl font-black text-blue-600" id="modal-total-display">0 đ</span>
-                    </div>
-                    <span class="text-[10px] text-gray-400 font-medium max-w-[120px] text-right">Chỉ áp dụng mức giá cơ bản (chưa tính chiết khấu VIP)</span>
-                </div>
-            </div>
-            <!-- Modal Footer -->
-            <div class="bg-gray-50 p-6 border-t border-gray-100 flex gap-3">
-                <button onclick="closeOrderModal()" class="flex-1 bg-white hover:bg-gray-100 text-gray-700 border border-gray-200 py-3 rounded-xl font-bold transition">Đóng lại</button>
-                <button onclick="submitMockOrder()" class="flex-1 bg-primary hover:bg-blue-600 text-white py-3 rounded-xl font-bold shadow-lg shadow-blue-500/20 transition flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-circle-check"></i> Xác nhận mua
-                </button>
-            </div>
-        </div>
-    </div>
-
     <!-- Zalo Contact Modal -->
     <div id="zalo-modal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center hidden p-4">
         <div class="bg-white rounded-3xl w-full max-w-md shadow-2xl border border-gray-100 overflow-hidden transform scale-95 transition-transform duration-300 text-center p-8">
@@ -731,69 +674,6 @@
                     row.style.display = "none";
                 }
             });
-        }
-
-        // Search through the table in real-time
-        function filterPricingTable() {
-            const input = document.getElementById('table-search');
-            const filter = input.value.toUpperCase();
-            const rows = document.querySelectorAll('#pricing-table tbody tr');
-
-            rows.forEach(row => {
-                const serviceNameText = row.children[2].textContent || row.children[2].innerText;
-                const platformText = row.children[1].textContent || row.children[1].innerText;
-                if (serviceNameText.toUpperCase().indexOf(filter) > -1 || platformText.toUpperCase().indexOf(filter) > -1) {
-                    row.style.display = "";
-                } else {
-                    row.style.display = "none";
-                }
-            });
-        }
-
-        // Order Modal Calculator Logic
-        let activePrice = 0;
-        function openOrderModal(serviceName, price) {
-            activePrice = price;
-            document.getElementById('modal-service-name').value = serviceName;
-            document.getElementById('modal-service-price').value = price;
-            document.getElementById('modal-quantity').value = 1000;
-            document.getElementById('modal-link').value = '';
-            calculateTotal();
-
-            // Show modal
-            const modal = document.getElementById('order-modal');
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.children[0].classList.replace('scale-95', 'scale-100');
-            }, 10);
-        }
-
-        function closeOrderModal() {
-            const modal = document.getElementById('order-modal');
-            modal.children[0].classList.replace('scale-100', 'scale-95');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 150);
-        }
-
-        function calculateTotal() {
-            const qty = parseFloat(document.getElementById('modal-quantity').value) || 0;
-            const total = qty * activePrice;
-            // Format number to VND localized currency
-            document.getElementById('modal-total-display').innerText = total.toLocaleString('vi-VN') + ' đ';
-        }
-
-        // Action when mock ordering is submitted
-        function submitMockOrder() {
-            const linkInput = document.getElementById('modal-link');
-            if(!linkInput.value.trim()) {
-                showToast("Cảnh báo!", "Vui lòng nhập đường dẫn liên kết tài khoản / video!", "warning");
-                linkInput.focus();
-                return;
-            }
-
-            closeOrderModal();
-            showToast("Thành công!", "Tính toán thành công! Vui lòng đăng nhập Tiến Thành Media để thực hiện thanh toán tự động.");
         }
 
         // Zalo Modal Logic
